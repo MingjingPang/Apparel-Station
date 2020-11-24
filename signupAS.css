@@ -1,0 +1,92 @@
+ body{
+  font-family: 'Raleway', sans-serif;
+ }
+
+
+/*Login*/
+
+/* Overview of the margin and space */
+.login-page{
+
+    width: 400px;
+    padding: 150px;
+    margin: center;
+}
+
+/* Format of the entire grid */
+.form{
+
+    position: relative;
+    max-width: 450px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Design of the form */
+input[type = Email], input[type=text], input[type=password] {
+
+    font-family: Arial, Helvetica, sans-serif;
+    width: 450px;
+    text-transform: capitalize;
+    margin: center;
+    padding: 10px;
+    font-size: 15pt;
+    box-sizing: border-box;
+    border: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Login Button layout and design */
+input[type = submit] {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    background-color: #abafe0;
+    margin: center;
+    width: 240px;
+    padding: 10px;
+    color: white;
+    font-size: 15pt;
+    cursor: pointer;
+}
+
+/* The text format of "Email", "Username", "Password */
+label{
+
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    color: black;
+    width: 0px;
+    font-weight: lighter;
+    display: ruby;
+    margin: center;
+    text-align: center;
+
+}
+
+.Title {
+    width: 100%;
+    padding: 10px;
+    margin: center;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(61, 97, 144, .3);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+reminder {
+    list-style-type: none;
+    float: center;
+    margin: center;
+    color: red;
+}
+
+
+
+

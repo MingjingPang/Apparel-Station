@@ -1,0 +1,145 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+}
+
+.left-column {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
+.left-column img {
+    width: 65%;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    opacity: 0;
+}
+
+.left-column img.active {
+    opacity: 1;
+}
+
+.preview{
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
+.preview img {
+    width: 17%;
+    left: -85px;
+    top: 35px;
+    opacity: 0;
+    padding: 5px;
+}
+
+.preview2 img {
+    width: 17%;
+    left: -85px;
+    top: 170px;
+    opacity: 0;
+    padding: 5px;
+}
+
+.preview3 img {
+    width: 17%;
+    left: -85px;
+    top: 305px;
+    opacity: 0;
+    padding: 5px;
+}
+
+
+/* right hand side and product Description*/
+.right-column{
+    float: right;
+    width: 100%;
+    margin-top: 60px;
+    margin-left: 130px;
+}
+
+.product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+}
+.product-description span {
+    font-size: 26px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+}
+
+.product-price span {
+    font-size: 20px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+}
+
+.sizes{
+  padding-top: 10px;
+}
+
+.size-choose button {
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.size-choose button:hover,
+.size-choose button:active,
+.size-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+}
+
+.color{
+  background-color: rgb(146, 161, 175);
+  border-radius: 50%;
+  padding: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.cart-btn {
+    display: inline-block;
+    background-color: rgb(112, 112, 112);
+    border-radius: 6px;
+    font-size: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 150px;
+    transition: all .5s;
+}
+.cart-btn:hover {
+    background-color: #64af3d;
+}
+
+.quantity{
+  padding-bottom: 15px;
+}
+
+.quantity select{
+  background-color: transparent;
+}
+

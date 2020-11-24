@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="womens.css">
+    <link rel="stylesheet" type="text/css" href="headernav.css">
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Apparel Station: Womens</title>
+</head>
+<body>
+    <style>
+        body {
+            background: rgb(214,  219, 240);
+    }
+</style>
+
+<div class="header">
+    <div class="inner_header">
+        <div class="logo_container">
+            <a href="MainPage.html"><img class="img-logo" src="img/Logo.png" alt="Logo"></a>
+            <ul class="navigation_a">
+                <a href="MainPage.html"><li>HOME</li></a>
+                <a href="MensPage.html"><li>MEN</li></a>
+                <a href="WomensPage.html"><li>WOMEN</li></a>
+                <a style="color:red" href="SalesPage.html"><li>SALES</li></a>
+            </ul>
+
+        </div>
+
+        <ul class="navigation_b">
+            <a href="LogInApparelStation.html"><li>log-in</li></a>
+            <a href="SignUpAS.html"><li>sign-up</li></a>
+            <a><li><i class="fas fa-search"></i></li></a>
+            <a><h4><li><i class="fas fa-shopping-bag"></i></li></h4></a>
+        </ul>
+    </div>
+</div>
+
+<div class="leftcol">
+        <span>Browse By:</span><br><br>
+        <a href="MensPage.html">Men</a><br><br>
+        <a href="WomensPage.html">Women</a><br><br>
+        <a style="color:red" href="SalesPage.html">S A L E S</a>
+</div>
+
+<section>
+    <div class="maincontent">
+        <span>WOMEN'S CLOTHING</span>
+        <div class="row">
+            <div class="product">
+                <img data-image="mompants" class="active" src="img/mompants.jpg" alt="">
+                <span>High-Waisted Mom Pants</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="jeans" class="active" src="img/LeviJeans.jpg" alt="">
+                <span>Levi's Icon Jeans</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="mompants" class="active" src="img/mompants.jpg" alt="">
+                <span>High-Waisted Mom Pants</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="jeans" class="active" src="img/LeviJeans.jpg" alt="">
+                <span>Levi's Icon Jeans</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="mompants" class="active" src="img/mompants.jpg" alt="">
+                <span>High-Waisted Mom Pants</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="jeans" class="active" src="img/LeviJeans.jpg" alt="">
+                <span>Levi's Icon Jeans</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="mompants" class="active" src="img/mompants.jpg" alt="">
+                <span>High-Waisted Mom Pants</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="jeans" class="active" src="img/LeviJeans.jpg" alt="">
+                <span>Levi's Icon Jeans</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a href="WomensPage.html">1</a>
+              <a href="#" class="active">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">&raquo;</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class = "select">
+    <button id="checkout" onclick="window.location.href='checkout.html'">Checkout</button>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    var noti = document.querySelector('h4');
+    var select = document.querySelector('.select');
+    var button = document.getElementsByTagName('button');
+    for(var but of button){
+        but.addEventListener('click', (e)=>{
+            var add = Number(noti.getAttribute('data-count') || 0);
+            noti.setAttribute('data-count', add +1);
+            noti.classList.add('zero')
+
+
+
+
+            // copy and paste //
+            var parent = e.target.parentNode;
+            var clone = parent.cloneNode(true);
+            select.appendChild(clone);
+
+            if (clone) {
+                noti.onclick = ()=>{
+                    select.classList.toggle('display');
+                }
+            }
+        })
+    }
+</script>
