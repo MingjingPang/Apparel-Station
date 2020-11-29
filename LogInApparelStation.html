@@ -6,8 +6,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/favicon-16x16.png">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>
-    </title>
+    
+   <!-- Initiate Firebase Apps -->
+    <script src="/__/firebase/8.1.1/firebase-app.js"></script>
+    <script src="/__/firebase/8.1.1/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    
 </head>
 
 <body>
@@ -72,9 +76,22 @@
     </div>
 
  </div>
-
-
-
-
+    
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAabP0_wNf6rRz4q_YFjwPps4MOA0jZpiM",
+    authDomain: "apparel-station.firebaseapp.com",
+    databaseURL: "https://apparel-station.firebaseio.com",
+    projectId: "apparel-station",
+    storageBucket: "apparel-station.appspot.com",
+    messagingSenderId: "342533671958",
+    appId: "1:342533671958:web:6fff0796d649187e11f937",
+    measurementId: "G-V7FC9N0QBT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 </html>
