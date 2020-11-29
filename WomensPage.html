@@ -16,6 +16,7 @@
     }
 </style>
 
+<!--Beginning of the Navigation Bar -->
 <div class="header">
     <div class="inner_header">
         <div class="logo_container">
@@ -29,6 +30,7 @@
 
         </div>
 
+<!--Right side of the Navigation Bar -->
         <ul class="navigation_b">
             <a href="LogInApparelStation.html"><li>log-in</li></a>
             <a href="SignUpAS.html"><li>sign-up</li></a>
@@ -38,6 +40,7 @@
     </div>
 </div>
 
+<!--Navigation Bar for the Products page -->
 <div class="leftcol">
         <span>Browse By:</span><br><br>
         <a href="MensPage.html">Men</a><br><br>
@@ -45,6 +48,7 @@
         <a style="color:red" href="SalesPage.html">S A L E S</a>
 </div>
 
+<!-- Main Section to display Products -->
 <section>
     <div class="maincontent">
         <span>WOMEN'S CLOTHING</span>
@@ -98,6 +102,7 @@
                 <button>ADD TO BAG</button>
             </div>
 
+            <!-- Page number for Products Page -->
             <div class="pagination">
               <a href="#">&laquo;</a>
               <a href="#" class="active">1</a>
@@ -111,6 +116,8 @@
         </div>
     </div>
 </section>
+    
+<!-- Drop down Check out Box -->
 <div class = "select">
     <button id="checkout" onclick="window.location.href='checkout.html'">Checkout</button>
 </div>
@@ -119,6 +126,7 @@
 </body>
 </html>
 
+<!-- Javascript to put items into the Shopping bag and updates the bag number -->
 <script type="text/javascript">
     var noti = document.querySelector('h4');
     var select = document.querySelector('.select');
@@ -132,7 +140,7 @@
 
 
 
-            // copy and paste //
+            //puts item into shopping bag//
             var parent = e.target.parentNode;
             var clone = parent.cloneNode(true);
             select.appendChild(clone);

@@ -1,4 +1,6 @@
- a, a:hover, a:focus, a:active {
+/* mens page css, womens page css, sales page css */ 
+
+a, a:hover, a:focus, a:active {
       text-decoration: none;
       color: inherit;
       cursor: pointer;
@@ -8,6 +10,7 @@
   font-family: 'Raleway', sans-serif;
  }
 
+/* css for product page side Navigation bar */
 .leftcol{
     max-width: 10%;
     height: 100%;
@@ -17,6 +20,7 @@
     padding: 20px;
 }
 
+/* main content/products Styling */
 .maincontent{
     max-width: 100%;
     max-height: 100%;
@@ -63,6 +67,7 @@ button:hover {
     background-color: #64af3d;
 }
 
+/* Page number Styling */
 .pagination {
   display: inline-block;
   float: right;
@@ -87,6 +92,7 @@ button:hover {
   border-radius: 5px;
 }
 
+/* Shopping bag Styling */
 h4{
         width: 3%;
         position: relative;
@@ -113,6 +119,7 @@ h4.zero:before{
   opacity: 1;
 }
 
+/* Check-out bag Styling */
 .select{
   width:60%;
   height: 580px;
