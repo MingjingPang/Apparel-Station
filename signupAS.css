@@ -42,7 +42,6 @@ input[type = Email], input[type=text], input[type=password] {
 input[type = submit] {
 
     font-family: Arial, Helvetica, sans-serif;
-    text-transform: capitalize;
     background-color: #abafe0;
     margin: center;
     width: 240px;

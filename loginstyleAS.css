@@ -29,7 +29,6 @@ input[type = Email], input[type=text], input[type=password] {
 
     font-family: Arial, Helvetica, sans-serif;
     width: 450px;
-    text-transform: capitalize;
     margin: center;
     padding: 10px;
     font-size: 15pt;
