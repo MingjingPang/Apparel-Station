@@ -1,0 +1,40 @@
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.message {
+    border-style: double;
+    color:black;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 10%;
+    padding: 40px;
+    font-size: bold;
+
+}
+
+.message span{
+    text-align: center;
+    margin-left: 30%;
+}
+
+.message button{
+    display: center;
+    background-color: rgb(160, 203, 245);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 9px 104.34px;
+    transition: all .5s;
+    outline: 1px solid;
+    cursor: pointer;
+    margin-left: 20%;
+}
