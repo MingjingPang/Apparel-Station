@@ -10,8 +10,7 @@
     <!-- Initiate Firebase Apps -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
-
-    <script src="signup.js"></script>
+    <script src="app.js.js"></script>
 </head>
 
 <body>
@@ -44,22 +43,17 @@
 </div>
 
 <div class = "Title">
-    <h3>SIGN UP</h3>
+    <h3>S I G N  U P</h3>
 </div>
 
-<div class="login">
+<div id="formContainer">
   <div class="form">
-     <form method = "post" action = "MainPage.html".html>
-        <!-- The content of the form -->
-        <input type = "email" size = "25" maxlength="30" required placeholder="EMAIL" id="email">
-        <input type = "password" size = "25" required placeholder="PASSWORD" id="password">
-        <input type = "password" size = 25 required placeholder="RE-ENTER PASSWORD" id="password">
-        <reminder>
-            <a>Password must contain 8-20 characters, at least one upper-case, number and special character</a>
-        </reminder>
-        <input type = "submit" value = "Sign Up" id="signUp">
-     </form>
-    </div>
- </div>
+    <input type = "email" size = "25" maxlength="30" required placeholder="EMAIL" id="email"> <br>
+    <input type = "password" size = "25" required placeholder="PASSWORD" id="password"> <br>
+
+    <button onclick="signUp()" id="signUp"> Sign Up </button>
+    <p>already have an account?  <a href="LogInApparelStation.html"> <u>Log in here! </u></a></p>
+</div>
+
 </body>
 </html>

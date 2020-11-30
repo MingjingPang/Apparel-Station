@@ -39,7 +39,7 @@ input[type = Email], input[type=text], input[type=password] {
 }
 
 /* Login Button layout and design */
-input[type = submit] {
+button{
 
     font-family: Arial, Helvetica, sans-serif;
     background-color: #abafe0;

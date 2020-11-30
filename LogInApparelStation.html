@@ -8,10 +8,10 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     
    <!-- Initiate Firebase Apps -->
-    <script src="/__/firebase/8.1.1/firebase-app.js"></script>
-    <script src="/__/firebase/8.1.1/firebase-analytics.js"></script>
-    <script src="/__/firebase/init.js"></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="app.js.js"></script>
+
 </head>
 
 <body>
@@ -49,49 +49,17 @@
 </div>
 
 <div class="login">
-
   <div class="form">
+    <input type = "email" size = "25" maxlength="30" required placeholder="EMAIL" id="email"> <br>
+    <input type = "password" size = "25" required placeholder="PASSWORD" id="password"> <br>
 
-    <!--Link to "user.html" after form is submitted-->
-
-
-     <form method = "post" action = user.html>
-
-        <!-- The content of the form -->
-
-        <label>
-
-            <input type="email" id="email" name="email" maxlength="30"placeholder="EMAIL">
-
-            <input Password = "PASSWORD" type = "password" size = "25"placeholder="PASSWORD">
-
-            <input type = "submit" value = "login">
-
-            <input type = "submit" value = "Sign Up">
-
-        </label>
+    <button onclick="signIn()" id="signIn"> Sign In </button> 
+    <p>Don't have an account?  <a href="SignUpAS.html"> <u>Sign Up here! </u></a></p>
 
     </form>
 
     </div>
 
  </div>
-    
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAabP0_wNf6rRz4q_YFjwPps4MOA0jZpiM",
-    authDomain: "apparel-station.firebaseapp.com",
-    databaseURL: "https://apparel-station.firebaseio.com",
-    projectId: "apparel-station",
-    storageBucket: "apparel-station.appspot.com",
-    messagingSenderId: "342533671958",
-    appId: "1:342533671958:web:6fff0796d649187e11f937",
-    measurementId: "G-V7FC9N0QBT"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
 </body>
 </html>

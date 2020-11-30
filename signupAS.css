@@ -29,7 +29,7 @@ input[type = Email], input[type=text], input[type=password] {
 
     font-family: Arial, Helvetica, sans-serif;
     width: 450px;
-    margin: center;
+    flex: center;
     padding: 10px;
     font-size: 15pt;
     box-sizing: border-box;
@@ -39,7 +39,7 @@ input[type = Email], input[type=text], input[type=password] {
 }
 
 /* Login Button layout and design */
-input[type = submit] {
+button {
 
     font-family: Arial, Helvetica, sans-serif;
     background-color: #abafe0;
@@ -77,14 +77,3 @@ label{
 
 
 }
-
-reminder {
-    list-style-type: none;
-    float: center;
-    margin: center;
-    color: red;
-}
-
-
-
-
