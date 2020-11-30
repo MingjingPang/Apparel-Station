@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/womens.css">
+    <link rel="stylesheet" type="text/css" href="css/headernav.css">
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Apparel Station: Womens</title>
+</head>
+<body>
+    <style>
+        body {
+            background: rgb(214,  219, 240);
+    }
+</style>
+
+<!--Beginning of the Navigation Bar -->
+<div class="header">
+    <div class="inner_header">
+        <div class="logo_container">
+            <a href="MainPage.html"><img class="img-logo" src="img/Logo.png" alt="Logo"></a>
+            <ul class="navigation_a">
+                <a href="MainPage.html"><li>HOME</li></a>
+                <a href="MensPage.html"><li>MEN</li></a>
+                <a href="#"><li>WOMEN</li></a>
+                <a style="color:red" href="SalesPage.html"><li>SALES</li></a>
+            </ul>
+
+        </div>
+
+<!--Right side of the Navigation Bar -->
+        <ul class="navigation_b">
+            <a href="LogInApparelStation.html"><li>log-in</li></a>
+            <a href="SignUpAS.html"><li>sign-up</li></a>
+            <a><h4><li><i class="fas fa-shopping-bag"></i></li></h4></a>
+        </ul>
+    </div>
+</div>
+
+<!--Navigation Bar for the Products page -->
+<div class="leftcol">
+        <span>Browse By:</span><br><br>
+        <div class="dropdown">
+          <a href="MensPage.html">Mens</a><br><br>
+          <div class="dropdown-content">
+            <a href="MensTops.html">Tops</a>
+            <a href="MensPants.html">Pants</a>
+            <a href="MensSweater.html">Sweater</a>
+          </div>
+        </div>
+        <div class="dropdown">
+        <a href="WomensPage.html">Womens</a><br><br>
+          <div class="dropdown-content">
+            <a href="WomensTops.html">Tops</a>
+            <a href="#">Pants</a>
+            <a href="WomensSweaters.html">Sweater</a>
+          </div>
+        </div>
+        <a style="color:red" href="SalesPage.html" >S A L E S</a>
+</div>
+
+<!-- Main Section to display Products -->
+<section>
+    <div class="maincontent">
+        <span>WOMEN'S CLOTHING</span>
+        <div class="row">
+            <div class="product">
+                <img data-image="joggerpants" class="active" src="img/wpants1.jpg" alt="">
+                <span>BGG Utility Jogger Pants</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="joggerpants" class="active" src="img/wpants2.jpg" alt="">
+                <span>BGG Utility Jogger Pants</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="mompants" class="active" src="img/wpants1.jpg" alt="">
+                <span>High-Waisted Mom Pants</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="jeans" class="active" src="img/wpants2.jpg" alt="">
+                <span>Levi's Icon Jeans</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="buttonup" class="active" src="img/wpants1.jpg" alt="">
+                <span>Utility Button Up</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="buttonup" class="active" src="img/wpants2.jpg" alt="">
+                <span>Utility Button Up</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="scarf" class="active" src="img/wpants1.jpg" alt="">
+                <span>Sonia Nubby Scarf</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="product">
+                <img data-image="lake" class="active" src="img/wpants2.jpg" alt="">
+                <span>Uo Cropped Sweater</span>
+                <p>$48.00</p>
+                <button>ADD TO BAG</button>
+            </div>
+
+             <!-- Page number for Products Page -->
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a href="#" class="active">1</a>
+              <a href="Womens2.html">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">&raquo;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Drop down Check out Box -->
+<div class = "select">
+    <button id="checkout" onclick="window.location.href='checkout.html'">Checkout</button>
+</div>
+
+
+</body>
+</html>
+
+<!-- Javascript to put items into the Shopping bag and updates the bag number -->
+<script type="text/javascript">
+    var noti = document.querySelector('h4');
+    var select = document.querySelector('.select');
+    var button = document.getElementsByTagName('button');
+    for(var but of button){
+        but.addEventListener('click', (e)=>{
+            var add = Number(noti.getAttribute('data-count') || 0);
+            noti.setAttribute('data-count', add +1);
+            noti.classList.add('zero')
+
+
+
+
+            //puts item into shopping bag//
+            var parent = e.target.parentNode;
+            var clone = parent.cloneNode(true);
+            select.appendChild(clone);
+            clone.setAttribute("id", "cartItem");
+            clone.lastElementChild.innerText = "Remove Item";
+            clone.lastElementChild.setAttribute("onclick", "removeFromCart(this)");
+
+            if (clone) {
+                noti.onclick = ()=>{
+                    select.classList.toggle('display');
+                }
+            }
+        })
+    }
+
+    //removes items from cart//
+    function removeFromCart(e){
+        var myobj = document.getElementById("cartItem");
+        myobj.remove();
+        var add = Number(noti.getAttribute('data-count') || 0);
+            noti.setAttribute('data-count', add -1);
+            noti.classList.add('zero')
+    }
+
+</script>
