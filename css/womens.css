@@ -160,7 +160,7 @@ h4.zero:before{
 }
 
 .select div button{
-  display: none;
+  display: absolute;
   position: absolute;
   left:470px;
   top:150px;
