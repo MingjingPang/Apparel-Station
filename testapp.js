@@ -15,6 +15,7 @@ var firebaseConfig =
 firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
+  //Sign up function and redirect to Sign in Page
     function signUp()
         {
         var email = document.getElementById("email");
@@ -34,7 +35,8 @@ firebase.initializeApp(firebaseConfig);
             }
           });
         }
-       
+    
+  //Sign in function and redirect to Main Page 
     function signIn(){
         var email = document.getElementById("email");
         var password = document.getElementById("password");
@@ -53,7 +55,8 @@ firebase.initializeApp(firebaseConfig);
             }
           });
     }
-       
+    
+//Sign out function 
     function signOut(){
         auth.signOut();
         alert("Signed Out");
