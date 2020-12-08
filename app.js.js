@@ -14,7 +14,8 @@ var firebaseConfig =
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
-    
+   
+  //Sign Up function and redirect to Sign In Page 
     function signUp()
         {
         var email = document.getElementById("email");
@@ -28,7 +29,7 @@ firebase.initializeApp(firebaseConfig);
             window.location.href="LogInApparelStation.html"
             }
         }
-       
+    //Sign In fucntion and redirect to Main Page   
     function signIn()
         {
         var email = document.getElementById("email");
@@ -46,12 +47,14 @@ firebase.initializeApp(firebaseConfig);
             }
 
         }
-       
+    
+  //Sign Out fucntion and redirect to Main Page 
     function signOut(){
         auth.signOut();
         //alert("Signed Out");
         }
    
+    //aler function to show active user and email after signing in 
     auth.onAuthStateChanged(function(user){
     
         if(user)
