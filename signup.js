@@ -16,7 +16,7 @@
 
     const auth = firebase.auth();
 
-
+  //Sign up function to update the user to firebase
     function signUp(){
         var email =  document.getElementById("email");
         var password =  document.getElementById("password");
