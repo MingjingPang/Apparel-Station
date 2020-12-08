@@ -14,61 +14,53 @@ var firebaseConfig =
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
-   
-  //Sign Up function and redirect to Sign In Page 
+
     function signUp()
         {
         var email = document.getElementById("email");
         var password = document.getElementById("password");
+
         const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
         promise.catch(e => alert(e.message));
         
-        alert("You've successfully signed up, please log in to continue shopping!");
-        if (auth.createUserWithEmailAndPassword(email.value, password.value))
-            {
-            window.location.href="LogInApparelStation.html"
+        alert("Signed Up");
+
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if(firebaseUser) {
+              console.log(firebaseUser);
+              window.location = 'LogInApparelStation.html';
+            } else {
+              console.log('Sign Up Error! Please Try Again!');
             }
+          });
         }
-    //Sign In fucntion and redirect to Main Page   
-    function signIn()
-        {
+       
+    function signIn(){
         var email = document.getElementById("email");
         var password = document.getElementById("password");
+
         const promise = auth.signInWithEmailAndPassword(email.value, password.value);
         promise.catch(e => alert(e.message));
-        
-        if (auth.signInWithEmailAndPassword(email.value, password.value))
-            {
-            window.location.href="MainPage.html"
-            }
-        else
-            {
-            alert("Wrong infromation, please try again.")
-            }
 
-        }
-    
-  //Sign Out fucntion and redirect to Main Page 
+        alert("Signed In " + email.value);
+
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if(firebaseUser) {
+              console.log(firebaseUser);
+              window.location = 'MainPage.html';
+            } else {
+              console.log('Sign In Error! Please Try Again!');
+            }
+          });
+    }
+       
     function signOut(){
         auth.signOut();
-        //alert("Signed Out");
+        alert("Signed Out");
+        window.location = 'MainPage.html'
         }
    
-    //aler function to show active user and email after signing in 
-    auth.onAuthStateChanged(function(user){
+
+
     
-        if(user)
-        {
-        var email = user.email;
-        alert("Active User " + email);
-        //Take user to home page
-        //is signed in  
-        }
-        else
-        {
-        //alert("No active user");
-        //no user is signed in
-        }  
-        });
-        
-        
+
